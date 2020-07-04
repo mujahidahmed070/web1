@@ -1,0 +1,503 @@
+body {
+    font-family: sans-serif;
+    background: #f7edd5;
+  }
+  
+  .container {
+    max-width: 900px;
+  }
+  
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  input {
+    outline: none !important;
+  }
+  
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+  
+  section#formHolder {
+    padding: 50px 0;
+  }
+
+  /*  ***************  Brand Section  Starts******************** */
+
+  .brand {
+    padding: 20px;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #00b4d8c9 0%, #90e1efda 74%), url("https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    min-height: 100px;
+    height: 540px;
+    position: relative;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.6s cubic-bezier(1, -0.375, 0.285, 0.995);
+    z-index: 9999;
+  }
+  .brand.active {
+    width: 100%;
+  }
+  .brand::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(315deg, #00b4d8c9 0%, #90e1efda 74%), url("https://images.pexels.com/photos/3815585/pexels-photo-3815585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    z-index: -1;
+  }
+
+  .brand .heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: all 0.6s;
+  }
+  .brand .heading.active {
+    top: 100px;
+    left: 100px;
+    transform: translate(0);
+  }
+  .brand .heading h2 {
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .brand .heading p {
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    white-space: 4px;
+    font-family: sans-serif;
+  }
+
+  .readmore-btn {
+    border:2px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    color:#000;
+    font:12px Montserrat;
+    text-transform:uppercase;  
+    padding:10px;
+    font-weight:600;
+    max-width:200px;
+    display:block;
+    text-align:center;  
+    margin:10px auto;
+    position:relative;
+  }
+  .readmore-btn:hover {
+    background:#000;
+    border-color:#000;
+    color:#fff;
+  }
+  
+/*  ***************  Brand Section  Ends ******************** */
+
+/*  *************** Login-Form Starts ******************** */
+  .form {
+    position: relative;
+  }
+  .form .form-peice {
+    background: #fff;
+    min-height: 480px;
+    margin-top: 30px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    color: #bbbbbb;
+    padding: 30px 0 60px;
+    transition: all 0.9s cubic-bezier(1, -0.375, 0.285, 0.995);
+    position: absolute;
+    top: 0;
+    left: -30%;
+    width: 130%;
+    overflow: hidden;
+  }
+  .form .form-peice.switched {
+    transform: translateX(-100%);
+    width: 100%;
+    left: 0;
+  }
+  .form form {
+    padding: 0 40px;
+    margin: 0;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
+  .form form .form-group {
+    margin-bottom: 5px;
+    position: relative;
+  }
+  
+  .form form label {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    transform: translateY(40px);
+    transition: all 0.4s;
+    cursor: text;
+    z-index: -1;
+  }
+  .form form label.active {
+    transform: translateY(10px);
+    font-size: 10px;
+  }
+  .form form label.fontSwitch {
+    font-family: "Raleway", sans-serif !important;
+    font-weight: 600;
+  }
+  .form form input:not([type=submit]) {
+    background: none;
+    outline: none;
+    border: none;
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    border-bottom: 1px solid rgb(206, 206, 206);
+    color: #444;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    z-index: 1;
+  }
+  .form form input:not([type=submit]).hasError {
+    border-color: #0096C7;
+  }
+
+  .form form input[type=password] {
+    color: #0096C7;
+  }
+  .form form .CTA {
+    margin-top: 30px;
+  }
+  .form form .CTA input {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 5px 30px;
+    background: #0096C7;
+    color: #fff;
+    border-radius: 30px;
+    margin-right: 20px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0 8px 6px -6px rgb(122, 122, 122);
+  }
+  .form form .CTA a.switch {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: #8f8f8f;
+    text-decoration: underline;
+    transition: all 0.3s;
+  }
+  .form form .CTA a.switch:hover {
+    color: #0096C7;
+  }
+
+/*  *************** Login-Form Ends ******************** */
+
+
+/*  *************** Register-Form Starts ******************** */
+
+.card-like {
+  overflow: scroll;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 6px;
+  padding: 50px;
+}
+
+.btn-irv {
+  width: 100%;
+  background: #038dab;
+  color: #fff !important;
+  font-weight: bold;
+  padding: 10px 0;
+  transition: all 0.3s;
+}
+.btn-irv:hover {
+  background: #02738d;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.btn-irv-default {
+  font-weight: bold;
+  background: #bbb;
+  color: #fff !important;
+}
+.btn-irv-default:hover {
+  background: #aaa;
+}
+
+.wizard {
+  overflow: hidden;
+}
+.wizard .wizard-header {
+  margin-bottom: 40px;
+}
+
+.wizard .wizard-header hr {
+  border-color: #038dab;
+  border-top-width: 2px;
+}
+.wizard .wizard-header .steps {
+  height: 25px;
+}
+.wizard .wizard-header .steps .wizard-step {
+  background: #038dab;
+  width: 40px;
+  padding: 8px;
+  height: 40px;
+  display: inline-block;
+  margin: 0 10px;
+  opacity: 0.2;
+  border-radius: 50%;
+  transition: all 0.8s;
+  color: white;
+}
+.wizard .wizard-header .steps .wizard-step.active {
+  opacity: 1;
+}
+.wizard .wizard-body {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.68, -0.3, 0.37, 0.6);
+}
+.wizard .wizard-body .step {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: -100%;
+  opacity: 0;
+}
+.wizard .wizard-body .step.initial {
+  position: relative;
+}
+.wizard .wizard-body .step.off {
+  opacity: 0 !important;
+  right: 100% !important;
+}
+.wizard .wizard-body .step.active {
+  right: 0;
+  margin-left: 0;
+  margin-top: 0;
+  opacity: 1;
+  transition: all 0.4s linear;
+  transition-delay: 0.1s;
+}
+
+.wizard .wizard-footer {
+  margin-top: 40px;
+}
+
+
+/*  *************** Register-Form Ends ******************** */
+
+  /* ************** For responsive Design  ********************* */
+  
+  @media (max-width: 768px) {
+    .container {
+      overflow: hidden;
+    }
+  
+    section#formHolder {
+      padding: 0;
+    }
+    section#formHolder div.brand {
+      min-height: 200px !important;
+    }
+    section#formHolder div.brand.active {
+      min-height: 100vh !important;
+    }
+    section#formHolder div.brand .heading.active {
+      top: 200px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    section#formHolder div.brand .success-msg p {
+      font-size: 16px;
+    }
+    section#formHolder div.brand .success-msg a {
+      padding: 5px 30px;
+      font-size: 10px;
+    }
+    section#formHolder .form {
+      width: 80vw;
+      min-height: 500px;
+      margin-left: 10vw;
+    }
+    section#formHolder .form .form-peice {
+      margin: 0;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      transition: all 0.5s ease-in-out;
+    }
+    section#formHolder .form .form-peice.switched {
+      transform: translateY(-100%);
+      width: 100%;
+      left: 0;
+    }
+    section#formHolder .form .form-peice > form {
+      width: 100% !important;
+      padding: 60px;
+      left: 50%;
+    }
+    
+  .signup-form{
+    width:100px;
+    overflow-y: auto;
+    height: 100%;
+  }
+  }
+
+  @media only screen and (max-width: 760px) {
+   .brand{
+     height: 250px;
+   }
+  
+  }
+
+  @media (max-width: 480px) {
+    section#formHolder .form {
+      width: 100vw;
+      margin-left: 0;
+    }
+  
+    h2 {
+      font-size: 50px !important;
+    }
+    .signup-form{
+  
+      width:100px;
+      overflow-y: auto;
+      height: 100%;
+    }
+  }
+
+
+  
+
+
+  .form form label.activ {
+    transform: translateY(10px);
+    font-size: 10px;
+  }
+
+  
+  .card-lik {
+    overflow: scroll;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 6px;
+    padding: 50px;
+  }
+  
+  .btn-irv {
+    width: 100%;
+    background: #038dab;
+    color: rgb(255, 255, 255) !important;
+    font-weight: bold;
+    padding: 10px 0;
+    transition: all 0.3s;
+  }
+  .btn-irv:hover {
+    background: #02738d;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  
+  .btn-irv-default {
+    font-weight: bold;
+    background: #bbb;
+    color: #fff !important;
+  }
+  .btn-irv-default:hover {
+    background: #aaa;
+  }
+  
+  .wizard {
+    overflow: hidden;
+  }
+  .wizard .wizard-headr {
+    margin-bottom: 40px;
+  }
+  
+  .wizard .wizard-headr hr {
+    border-color: #038dab;
+    border-top-width: 2px;
+  }
+  .wizard .wizard-headr .stps {
+    height: 25px;
+  }
+  .wizard .wizard-headr .stps .wizard-stp {
+    background: #038dab;
+    width: 40px;
+    padding: 8px;
+    height: 40px;
+    display: inline-block;
+    margin: 0 10px;
+    opacity: 0.2;
+    border-radius: 50%;
+    transition: all 0.8s;
+    color: white;
+  }
+  .wizard .wizard-headr .stps .wizard-stp.activ {
+    opacity: 1;
+  }
+  .wizard .wizard-bdy {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.68, -0.3, 0.37, 0.6);
+  }
+  .wizard .wizard-bdy .stp {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: -100%;
+    opacity: 0;
+  }
+  .wizard .wizard-bdy .stp.initl {
+    position: relative;
+  }
+  .wizard .wizard-bdy .stp.of {
+    opacity: 0 !important;
+    right: 100% !important;
+  }
+  .wizard .wizard-bdy .stp.activ {
+    right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    opacity: 1;
+    transition: all 0.4s linear;
+    transition-delay: 0.1s;
+  }
+  
+  .wizard .wizard-footer {
+    margin-top: 40px;
+  }
+
+
+
+
+
+
+
+
+
+  
