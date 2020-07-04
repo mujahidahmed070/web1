@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/Login.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,600" rel="stylesheet">
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <section id="formHolder">
+
+            <div class="row">
+
+                <!-- Brand Box -->
+                <div class="col-sm-6 col-lg-6 col-md-6 brand">
+                    <a href="#" class="logo"> <img src="https://2.bp.blogspot.com/-A3aCL6_CaRU/XN1BPYfeUNI/AAAAAAAAAm0/QCmNCzFQAGEds4lKlPHFB0bVXUv-OTD0wCLcBGAs/s1600/NYKS.jpg" alt="logo" width="70px" height="45px"></a>
+
+                    <div class="heading">
+                        <h4> Biometric Voice Attendance System </h4>
+                        <p><small> How to Use System </small></p>
+                        <!-- <p class="info-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates quibusdam doloremque?
+                    Reiciendis vitae ex laboriosam repellendus fugiat quis beatae eligendi excepturi libero voluptatum! Enim soluta nemo repellat quam aperiam?</p>  -->
+                        <a href="#" class="readmore-btn">Read More</a>
+                    </div>
+
+                </div>
+
+
+                <!-- Form Box -->
+                <div class="col-sm-6 form">
+
+                    <!-- Login Form -->
+                    <div class="login form-peice ">
+                        <form class="login-form" action="#">
+
+                            <div class="row">
+                                <div class="">
+                                    <div class="wizard card-lik">
+
+                                        <form action="#">
+
+                                            <div class="wizard-headr">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="stps text-center">
+                                                            <div class="wizard-stp activ"><i class="fa fa-location-arrow"></i></div>
+                                                            <div class="wizard-stp"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+                                                            <div class="wizard-stp"><i class="fa fa-microphone" aria-hidden="true"></i>
+                                                            </div>
+                                                            <hr />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="wizard-bdy">
+
+                                                <div class="stp initl activ">
+
+                                                    <!-- login step 1 code here -->
+                                                    <button class="btn btn-outline-primary btn-lg mt-4 ">Click here to detect your Location</button>
+
+                                                </div>
+
+                                                <div class="stp">
+
+                                                    <!-- login step 2 code here -->
+                                                    <h4>Do You Want To Do Landline Verification</h4>
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <!-- <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
+                                                </div>
+
+                                                <div class="stp">
+
+                                                    <!-- login step 3 code here -->
+                                                    <div class="form-group">
+                                                        <h4>read this </h4>
+                                                        <div id="controls">
+                                                            <button id="recordButton" class="btn btn-danger">Record</button>
+                                                            <!-- <button id="pauseButton" disabled>Pause</button> -->
+                                                            <button id="stopButton" class="btn btn-info" disabled>Stop</button>
+                                                        </div>
+                                                        <!-- <div id="formats">Format: start recording to see sample rate</div> -->
+                                                        <p><strong>Recordings:</strong></p>
+                                                        <button class="btn btn-success"><ol id="recordingsList"></ol></button>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            <br><br><br>
+                                            <div class="wizard-footer">
+                                                <div class="row">
+                                                    <div class="col-xs-6 pull-left block-center">
+                                                        <button id="wizard-pre" style="display:none" type="button" class="btn btn-irv btn-irv-default">
+                                             Previous
+                                          </button>
+                                                    </div>
+                                                    <div class="col-xs-6 pull-right text-center">
+                                                        <button id="wizard-nxt" type="button" class="btn btn-irv">
+                                             Next
+                                          </button>
+
+                                                    </div>
+                                                    <div class="col-xs-6 pull-right block-center">
+                                                        <button id="wizard-sub" style="display:none" type="submit" class="btn btn-irv">
+                                             Login
+                                          </button>
+                                                    </div>
+                                                    <div class="CTA my-2 mx-4">
+                                                        <a href="#" class="switch">I'm new here</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <!-- End Login Form -->
+
+
+                    <!-- Signup Form -->
+                    <div class="signup form-peice switched">
+                        <!-- <form class="signup-form" action="/add_user" method="post"> -->
+
+                        <div class="row">
+                            <div class="">
+                                <div class="wizard card-like">
+
+                                    <form action="/add_user" method="POST">
+
+                                        <div class="wizard-header">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="steps text-center">
+                                                        <div class="wizard-step active"><i class="fa fa-user"></i></div>
+                                                        <div class="wizard-step"><i class="fa fa-paper-plane" aria-hidden="true"></i></div>
+                                                        <div class="wizard-step"><i class="fa fa-microphone" aria-hidden="true"></i></div>
+                                                        <hr />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="wizard-body">
+
+                                            <div class="step initial active">
+
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" placeholder="First Name" name="register-firstname" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" placeholder="Last Name" name="register-lastname" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" placeholder="Phone Number" name="register-phone" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="email" placeholder="Email Id" name="register-mail" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="password" placeholder="Repeat Password" name="register-pass" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="password" placeholder="Repeat Password" name="register-pass" required>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="step">
+
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" placeholder="Address Line 1" name="register-address1" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" placeholder="Address Line 2" name="register-address2">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" placeholder="Enter City Name" name="register-city" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" placeholder="Enter State Name" name="register-state" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <input type="text" placeholder="Enter Pincode" name="register-pin" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="step">
+                                                <div class="row">
+
+                                                </div>
+                                                <div class="row">
+
+                                                </div>
+                                                <div class="row">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="wizard-footer">
+                                            <div class="row">
+                                                <div class="col-xs-6 pull-left block-center">
+                                                    <button id="wizard-prev" style="display:none" type="button" class="btn btn-irv btn-irv-default">
+                                             Previous
+                                          </button>
+                                                </div>
+                                                <div class="col-xs-6 pull-right text-center">
+                                                    <button id="wizard-next" type="button" class="btn btn-irv">
+                                             Next
+                                          </button>
+
+                                                </div>
+                                                <div class="col-xs-6 pull-right block-center">
+                                                    <button id="wizard-subm" style="display:none" type="submit" class="btn btn-irv">
+                                             Submit
+                                          </button>
+                                                </div>
+                                                <div class="CTA my-2 mx-4">
+                                                    <a href="#" class="switch">I have an account</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </form> -->
+                    </div>
+                    <!-- End Signup Form -->
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+
+    <!-- FOnt Awesome -->
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- Bootstrap  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Custom Js -->
+    <script src="/static/js/recorder.js"></script>
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/Login.js"></script>
+    <script src="/static/js/register.js"></script>
+
+</body>
+
+</html>
